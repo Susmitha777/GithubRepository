@@ -1,0 +1,55 @@
+<div class="container ">
+
+  <div class="bg-primary">
+    <h3>Github repository search</h3>
+  </div>
+  
+  <form class="inline">
+    <input [(ngModel)]="getRepoList" [ngModelOptions]="{standalone: true}" (input)="getFilterData()" type="text"
+      class="form-control" placeholder="Search">
+  </form>
+
+  <tr *ngFor="let hero of gitRepoData | filter:getRepoList">
+    <td>{{hero.id}}</td>
+    <td>{{hero.name}}</td>
+    <td>{{hero.fullname}}</td>
+    <td>{{hero.html_url}}</td>
+    <td>{{hero.fork}}</td>
+    <td>{{hero.url}}</td>
+    <td>{{hero.forks_url}}</td>
+    <td>{{hero.keys_url}}</td>
+    <td>{{hero.collaborators_url}}</td>
+    <td>{{hero.teams_url}}</td>
+    <td>{{hero.hooks_url}}</td>
+    <td>{{hero.issue_events_url}}</td>
+    <td>{{hero.events_url}}</td>
+    <td>{{hero.assignees_url}}</td>
+    <td>{{hero.branches_url}}</td>
+    <td>{{hero.tags_url}}</td>
+    <td>{{hero.blobs_url}}</td>
+    <td>{{hero.git_tags_url}}</td>
+    <td>{{hero.git_refs_url}}</td>
+    <td>{{hero.trees_url}}</td>
+    <td>{{hero.statuses_url}}</td>
+    <td>{{hero.languages_url}}</td>
+    <td>{{hero.stargazers_url}}</td>
+    <td>{{hero.contributors_url}}</td>
+    <td>{{hero.subscribers_url}}</td>
+    <td>{{hero.subscription_url}}</td>
+    <td>{{hero.commits_url}}</td>
+    <td>{{hero.git_commits_url}}</td>
+    <td>{{hero.comments_url}}</td>
+    <td>{{hero.issue_comment_url}}</td>
+    <td>{{hero.contents_url}}</td>
+    <td>{{hero.compare_url}}</td>
+    <td>{{hero.archive_url}}</td>
+    <td>{{hero.downloads_url}}</td>
+    <td>{{hero.issues_url}}</td>
+    <td>{{hero.pulls_url}}</td>
+    <td>{{hero.notifications_url}}</td>
+    <td>{{hero.releases_url}}</td>
+    <td>{{hero.deployments_url}}</td>
+
+  </tr>
+
+</div>
